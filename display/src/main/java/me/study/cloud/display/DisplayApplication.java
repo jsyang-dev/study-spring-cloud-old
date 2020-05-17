@@ -1,13 +1,11 @@
-package me.study.cloud;
+package me.study.cloud.display;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudySpringCloudApplication {
-
+public class DisplayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(StudySpringCloudApplication.class, args);
+        SpringApplication.run(DisplayApplication.class, args);
     }
-
 }
