@@ -4,6 +4,10 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
+ext {
+    springCloudVersion = 'Hoxton.RELEASE'
+}
+
 subprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
@@ -29,11 +33,18 @@ subprojects {
     test {
         useJUnitPlatform()
     }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
 }
 
 project(':display') {
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
+        compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
     }
 }
 
