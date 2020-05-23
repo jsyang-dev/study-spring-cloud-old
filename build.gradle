@@ -45,6 +45,8 @@ project(':display') {
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
         compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+        compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+        compile 'org.springframework.retry:spring-retry:1.2.2.RELEASE'
     }
 }
 
