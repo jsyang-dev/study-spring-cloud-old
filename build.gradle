@@ -48,6 +48,7 @@ project(':display') {
         compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
         compile 'org.springframework.retry:spring-retry:1.2.2.RELEASE'
         compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+        compile 'org.springframework.cloud:spring-cloud-starter-openfeign'
     }
 }
 
@@ -67,5 +68,8 @@ project(':eureka-server') {
 project(':zuul') {
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
+        compile 'org.springframework.cloud:spring-cloud-starter-netflix-zuul'
+        compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+        compile 'org.springframework.retry:spring-retry:1.2.2.RELEASE'
     }
 }
